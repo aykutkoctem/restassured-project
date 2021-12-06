@@ -76,3 +76,13 @@ Map<String,String> dbResultMap =dbResultMap=DB_Util.getRowMap(1);
         ;
     }
 }
+/**
+ * Write a Parameterized Test to test all regions instead of one above
+ * try couple different way
+ * 1. @ValueSource  to provide all 4 regions id
+ * 2. @MethodSource
+ *       -- get all id s from api response GET /regions and return List<Integer>
+ * 3. @MethodSource
+ *       -- get all id s from SELECT * FROM REGIONS query and return List<String>
+ *           and use it as a source
+ */

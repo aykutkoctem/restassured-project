@@ -14,8 +14,8 @@ import java.util.List;
 import static io.restassured.RestAssured.*;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
-public class Homework {
+@Tag("HOMEWORK")
+public class Test_Homework {
 
 
     @BeforeAll

@@ -3,6 +3,7 @@
 import com.cydeo.utility.SpartanTestBase;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 
@@ -44,6 +45,8 @@ public class P6_SerializationWithMap extends SpartanTestBase {
                 .when().post("/spartans").prettyPeek().
                 then().body("success", is("A Spartan is Born!"))
                 .extract().jsonPath().getInt("data.id");
+
+
 
 
         System.out.println("spartanId = " + spartanId);
@@ -99,6 +102,10 @@ public class P6_SerializationWithMap extends SpartanTestBase {
                 .when().get("/spartans/{id}").prettyPeek().
                 then().statusCode(200)
                 .extract().jsonPath();
+
+
+
+
 
         Assertions.assertEquals(spartanId, jsonPath.getInt("id"));
     }

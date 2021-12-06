@@ -9,9 +9,9 @@ import org.junit.platform.suite.api.*;
 //@SelectClasses(BaseAuthTest.class)
 @SelectPackages("com.cydeo.tests")
 //@IncludeTags("smokeAll")
-@IncludeTags("db")
+@IncludeTags("HOMEWORK")
 
-//@ExcludeTags("smoke2")
+//ExcludeTags("smoke2")
 public class TestRunner {
 
 
